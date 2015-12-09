@@ -22,5 +22,17 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>P3J-Software</groupId>
+      <artifactId>crearAsignaturas</artifactId>
+      <version>1.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>P3J-Software</groupId>
+      <artifactId>crearUsuarios</artifactId>
+      <version>1.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
