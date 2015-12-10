@@ -29,11 +29,12 @@ public class IUAdmin extends JFrame {
 	private JButton btnBorrarUsuario;
 	private JButton btnCrearAsignatura;
 	private JButton btnBorrarAsignatura;
+	private JButton btnCerrarSesin;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -45,7 +46,7 @@ public class IUAdmin extends JFrame {
 			}
 		});
 	}
-
+*/
 	/**
 	 * Create the frame.
 	 */
@@ -59,10 +60,27 @@ public class IUAdmin extends JFrame {
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[]{0, 0, 0, 0, 0};
-		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0};
+		gbl_contentPane.rowHeights = new int[]{31, 0, 0, 29, 0, 0, 0, 0};
 		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
+		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
+		{
+			btnCerrarSesin = new JButton("Cerrar sesión");
+			btnCerrarSesin.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					IULogin window = new IULogin();
+					window.setVisible(true);
+					dispose();
+				}
+			});
+			GridBagConstraints gbc_btnCerrarSesin = new GridBagConstraints();
+			gbc_btnCerrarSesin.anchor = GridBagConstraints.EAST;
+			gbc_btnCerrarSesin.gridwidth = 2;
+			gbc_btnCerrarSesin.insets = new Insets(0, 0, 5, 0);
+			gbc_btnCerrarSesin.gridx = 2;
+			gbc_btnCerrarSesin.gridy = 0;
+			contentPane.add(btnCerrarSesin, gbc_btnCerrarSesin);
+		}
 		{
 			lblAdministrador = new JLabel("Administrador");
 			lblAdministrador.setFont(new Font("Tahoma", Font.BOLD, 28));
@@ -70,7 +88,7 @@ public class IUAdmin extends JFrame {
 			gbc_lblAdministrador.gridwidth = 2;
 			gbc_lblAdministrador.insets = new Insets(0, 0, 5, 5);
 			gbc_lblAdministrador.gridx = 1;
-			gbc_lblAdministrador.gridy = 1;
+			gbc_lblAdministrador.gridy = 2;
 			contentPane.add(lblAdministrador, gbc_lblAdministrador);
 		}
 		{
@@ -85,7 +103,7 @@ public class IUAdmin extends JFrame {
 			gbc_btnCrearUsuario.fill = GridBagConstraints.HORIZONTAL;
 			gbc_btnCrearUsuario.insets = new Insets(0, 0, 5, 5);
 			gbc_btnCrearUsuario.gridx = 1;
-			gbc_btnCrearUsuario.gridy = 3;
+			gbc_btnCrearUsuario.gridy = 4;
 			contentPane.add(btnCrearUsuario, gbc_btnCrearUsuario);
 		}
 		{
@@ -100,7 +118,7 @@ public class IUAdmin extends JFrame {
 			gbc_btnBorrarUsuario.fill = GridBagConstraints.HORIZONTAL;
 			gbc_btnBorrarUsuario.insets = new Insets(0, 0, 5, 5);
 			gbc_btnBorrarUsuario.gridx = 2;
-			gbc_btnBorrarUsuario.gridy = 3;
+			gbc_btnBorrarUsuario.gridy = 4;
 			contentPane.add(btnBorrarUsuario, gbc_btnBorrarUsuario);
 		}
 		{
@@ -115,7 +133,7 @@ public class IUAdmin extends JFrame {
 			gbc_btnCrearAsignatura.fill = GridBagConstraints.HORIZONTAL;
 			gbc_btnCrearAsignatura.insets = new Insets(0, 0, 5, 5);
 			gbc_btnCrearAsignatura.gridx = 1;
-			gbc_btnCrearAsignatura.gridy = 4;
+			gbc_btnCrearAsignatura.gridy = 5;
 			contentPane.add(btnCrearAsignatura, gbc_btnCrearAsignatura);
 		}
 		{
@@ -130,7 +148,7 @@ public class IUAdmin extends JFrame {
 			gbc_btnBorrarAsignatura.fill = GridBagConstraints.HORIZONTAL;
 			gbc_btnBorrarAsignatura.insets = new Insets(0, 0, 5, 5);
 			gbc_btnBorrarAsignatura.gridx = 2;
-			gbc_btnBorrarAsignatura.gridy = 4;
+			gbc_btnBorrarAsignatura.gridy = 5;
 			contentPane.add(btnBorrarAsignatura, gbc_btnBorrarAsignatura);
 		}
 	}
