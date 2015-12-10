@@ -26,13 +26,13 @@
       <groupId>P3J-Software</groupId>
       <artifactId>crearAsignaturas</artifactId>
       <version>1.0</version>
-      <scope>test</scope>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>P3J-Software</groupId>
       <artifactId>crearUsuarios</artifactId>
       <version>1.0</version>
-      <scope>test</scope>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 </project>
