@@ -5,4 +5,5 @@ public class Principal {
 		IULogin window = new IULogin();
 		window.setVisible(true);
 	}
+	
 }
